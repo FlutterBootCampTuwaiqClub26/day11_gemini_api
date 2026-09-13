@@ -11,6 +11,8 @@ class GeminiApi {
 
 // !  = = = = = = = = = new concepts  = = = = = = = = = 
 
+      // new line
+
     Map<String, String>? header = {
       "x-goog-api-key": dotenv.get('api-key'),
     };
