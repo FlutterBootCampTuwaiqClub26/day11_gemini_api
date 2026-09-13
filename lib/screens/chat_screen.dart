@@ -1,4 +1,5 @@
 import 'package:dash_chat_2/dash_chat_2.dart';
+import 'package:day11_ai_platform_api/screens/stateful_demo_screen.dart';
 import 'package:day11_ai_platform_api/service/gemini_api.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,21 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            tooltip: 'مثال StatefulWidget',
+            icon: const Icon(Icons.school_outlined),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const StatefulDemoScreen(),
+                ),
+              );
+            },
+          ),
+        ],
+      ),
       body: DashChat(
         messageOptions: MessageOptions(
           avatarBuilder: (p0, onPressAvatar, onLongPressAvatar) {

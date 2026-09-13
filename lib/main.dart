@@ -1,7 +1,10 @@
 import 'package:day11_ai_platform_api/screens/chat_screen.dart';
+import 'package:day11_ai_platform_api/screens/stateful_demo_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async{
+  await dotenv.load();
   runApp(const MainApp());
 }
 
@@ -11,7 +14,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ChatScreen()
+      home: StatefulDemoScreen()
     );
   }
 }

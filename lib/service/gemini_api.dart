@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 class GeminiApi {
@@ -11,7 +12,7 @@ class GeminiApi {
 // !  = = = = = = = = = new concepts  = = = = = = = = = 
 
     Map<String, String>? header = {
-      "x-goog-api-key": "your api key",
+      "x-goog-api-key": dotenv.get('api-key'),
     };
 
     Map<String, String> body = {
