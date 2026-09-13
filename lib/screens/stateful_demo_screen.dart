@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+
 // هذه الصفحة تعليمية بحتة، هدفها توضيح مفهوم StatefulWidget للطلاب:
 // - StatelessWidget: ما عنده "ذاكرة"، كل مرة يتبنى (build) من جديد بدون أي حالة داخلية.
 // - StatefulWidget: عنده كائن State منفصل يعيش معه، وتقدر تغيّر قيم داخله
